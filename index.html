@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIMARNOPLAVA.COM</title>
+    <!-- Importing Space Grotesk for a modern, experimental look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+</head>
+<body>
+    <div id="dreamcore-overlay"></div>
+
+    <!-- Info Modal -->
+    <div id="info-modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div class="modal-text">
+                <p>Primarnoplava je umjetnički projekt baziran na spoju virtualne ispovijedi i oblikovanja.</p>
+                <p>Svatko tko želi odgovoriti na pitanje “Što vas drži budnima u kasne sate?”, sudjeluje svojim odgovorom u kreiranju postera, objekta ili videa koji sadrži poslanu misao, ideju ili ispovijed. Oblikovane postere, objekte i video stillove objavljuju se na instagram profilu projekta @primarnoplava.</p>
+                <p>Primarnoplava je umjetnička interpretacija utipkanog odgovora te nema poveznicu sa “rješavanjem problema”.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="content-wrapper">
+        <header>
+            <div class="header-left">
+                <button id="info-btn" class="header-btn">INFO</button>
+            </div>
+            
+            <a href="http://primarnoplava.com" class="header-link">
+                <h1>PRIMARNOPLAVA.COM</h1>
+            </a>
+            
+            <div class="header-right">
+                <a href="en.html" id="lang-btn" class="header-btn">ENG</a>
+            </div>
+        </header>
+
+        <main>
+            <section class="question-section">
+                <div class="marquee-container">
+                    <h2 id="main-question">ŠTO VAS DRŽI BUDNIMA U KASNE SATE?</h2>
+                </div>
+            </section>
+
+            <section class="form-section">
+                <form id="answer-form">
+            <input type="hidden" name="_subject" value="Novi odgovor (HR)">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_captcha" value="false">
+                    <div class="input-wrapper">
+                        <label for="nick">NICK</label>
+                        <input type="text" id="nick" name="nick" required placeholder="tko si?">
+                    </div>
+                    
+                    <div class="input-wrapper big-input">
+                        <label for="odgovor">ODGOVOR</label>
+                        <textarea id="odgovor" name="odgovor" rows="1" required placeholder="ispiši svoje misli..."></textarea>
+                    </div>
+
+                    <!-- Voice Memo Section -->
+                    <div class="voice-memo-section">
+                        <label>GLASOVNA PORUKA (OPCIONALNO)</label>
+                        <div class="voice-controls">
+                            <button type="button" id="record-btn" class="voice-btn">SNIMI</button>
+                            <button type="button" id="stop-btn" class="voice-btn hidden">STOP</button>
+                            <span id="recording-status" class="hidden">● Snimanje...</span>
+                        </div>
+                        <div id="audio-player-container" class="hidden">
+                            <audio id="audio-playback" controls></audio>
+                            <button type="button" id="delete-recording-btn" class="voice-btn small-btn">OBRIŠI</button>
+                        </div>
+                    </div>
+
+                    <div class="checkbox-wrapper">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent" class="checkbox-label-text">Prihvaćam da će se odgovor može koristiti u svrhe kreiranja sadržaja</label>
+                    </div>
+
+                    <button type="submit" id="submit-btn">POŠALJI ODGOVOR</button>
+                    <a href="https://instagram.com/primarnoplava" id="insta-btn" class="insta-link" target="_blank">INSTAGRAM</a>
+                </form>
+                <div id="thank-you-message" class="hidden">
+                    <p>HVALA VAM.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
