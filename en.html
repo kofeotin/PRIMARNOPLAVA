@@ -65,23 +65,10 @@
                         <textarea id="odgovor" name="odgovor" rows="1" required placeholder="write your thoughts..."></textarea>
                     </div>
 
-                    <!-- Voice Memo Section -->
-                    <div class="voice-memo-section">
-                        <label>VOICE MEMO (OPTIONAL)</label>
-                        <div class="voice-controls">
-                            <button type="button" id="record-btn" class="voice-btn">RECORD</button>
-                            <button type="button" id="stop-btn" class="voice-btn hidden">STOP</button>
-                            <span id="recording-status" class="hidden">● Recording...</span>
-                        </div>
-                        <div id="audio-player-container" class="hidden">
-                            <audio id="audio-playback" controls></audio>
-                            <button type="button" id="delete-recording-btn" class="voice-btn small-btn">DELETE</button>
-                        </div>
-                    </div>
 
                     <div class="checkbox-wrapper">
                         <input type="checkbox" id="consent" name="consent" required>
-                        <label for="consent" class="checkbox-label-text">I accept that the answer may be used for content creation purposes</label>
+                        <label for="consent" class="checkbox-label-text">I accept that the answer may be used for creating other purposes.</label>
                     </div>
 
                     <button type="submit" id="submit-btn">SEND ANSWER</button>
