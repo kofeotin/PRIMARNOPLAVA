@@ -174,7 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Check for Access Key placeholder
         const accessKeyInput = form.querySelector('input[name="access_key"]');
-        if (accessKeyInput && (accessKeyInput.value === "YOUR_ACCESS_KEY" || accessKeyInput.value === "")) {
+        if (accessKeyInput && (accessKeyInput.value === "YOUR_ACCESS_KEY_HERE" || accessKeyInput.value === "")) {
             alert("Please update index.html with your Web3Forms Access Key.\nGo to web3forms.com to get your key.");
             return;
         }
