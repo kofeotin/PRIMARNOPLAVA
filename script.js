@@ -187,8 +187,8 @@ document.addEventListener('DOMContentLoaded', () => {
         button.disabled = true;
 
         try {
-            // Using FormSubmit.co AJAX endpoint
-            const response = await fetch("https://formsubmit.co/ajax/primarnoplava@gmail.com", {
+            // Using local backend endpoint
+            const response = await fetch("/submit", {
                 method: 'POST',
                 body: formData
             });
